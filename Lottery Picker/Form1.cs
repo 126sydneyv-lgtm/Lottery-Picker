@@ -31,11 +31,13 @@ namespace Lottery_Picker
            int int4 = randGen.Next(1,max);
            int int5 = randGen.Next(1,max);
            int int6 = randGen.Next(1,max);
-            //if one number = another it picks a new number
+            //if int2 = int1 it picks a new number
             while(int2 == int1)
             { int2 = randGen.Next(1,max);}
+            //if int 3 = int2 or int1 it picks a new number
             while(int3 == int2 | int3 == int1) 
             {int3 = randGen.Next(1,max);}
+            //etc.
             while (int4 == int3 | int4 == int2 | int4 == int1)
             { int4 = randGen.Next(1,max);}
             while (int5 == int4 | int5 == int3 | int5 == int2 | int5 == int1)
